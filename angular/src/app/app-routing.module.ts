@@ -3,10 +3,11 @@ import { Routes, RouterModule } from '@angular/router';
 import { MovieListComponent } from './movie/movie-list/movie-list.component';
 import { AppComponent } from './app.component';
 import { MovieDetailComponent } from './movie/movie-detail/movie-detail.component';
+import { HomeComponent } from './home/home.component';
 
 const routes: Routes = [
-  { path: 'home', component: AppComponent },
-  { path: '**', redirectTo: 'home' }
+  { path: 'home', component: HomeComponent },
+  { path: '', component: HomeComponent }
 ];
 
 @NgModule({
