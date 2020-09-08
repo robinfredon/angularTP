@@ -16,4 +16,26 @@ export class MoviesBddService {
   get(): Observable<Array<Movie>>{
     return this.httpClient.get<Array<Movie>>(this.apiUrl);
   }
+
+  filter(search: string): Observable<Array<Movie>> {
+    const params: any = {};
+    params.name = search;
+    return this.httpClient.get<Array<Movie>>(this.apiUrl, {params});
+  }
+
+  getFromId(id: string): Observable<Movie> {
+    return this.httpClient.get<Movie>(`${this.apiUrl}/${id}`);
+  }
+
+  add(newMovie: Movie): Observable<Movie> {
+    return this.httpClient.post<Movie>(this.apiUrl, newMovie);
+  }
+
+  update(movie: Movie): Observable<Movie> {
+    return this.httpClient.put<Movie>(this.apiUrl, movie);
+  }
+
+  delete(movie: Movie) {
+    return this.httpClient.delete(`${this.apiUrl}/${movie.id}`);
+  }
 }
