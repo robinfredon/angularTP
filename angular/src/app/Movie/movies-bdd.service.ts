@@ -9,7 +9,8 @@ import {environment} from '../../environments/environment';
 })
 export class MoviesBddService {
 
-  apiUrl = `${environment.apiUrl}/devs`;
+  apiUrl = `${environment.apiUrl}/movies`;
+  apiKey = 'ae152c2c';
 
   constructor(private httpClient: HttpClient) { }
 
