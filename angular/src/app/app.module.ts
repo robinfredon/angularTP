@@ -7,6 +7,9 @@ import { MovieDetailComponent } from './Movie/movie-detail/movie-detail.componen
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { HomeComponent } from './home/home.component';
 import { RouterModule } from '@angular/router';
+import {MatToolbarModule} from '@angular/material/toolbar';
+import {MatButtonModule} from '@angular/material/button';
+import{FormsModule} from '@angular/forms';
 
 @NgModule({
   declarations: [
@@ -18,6 +21,9 @@ import { RouterModule } from '@angular/router';
   imports: [
     BrowserModule,
     BrowserAnimationsModule,
+    MatToolbarModule,
+    MatButtonModule,
+    FormsModule,
     RouterModule
   ],
   providers: [],

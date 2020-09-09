@@ -1,4 +1,6 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit,NgModule } from '@angular/core';
+import {MatSidenavModule} from '@angular/material/sidenav';
+
 
 @Component({
   selector: 'app-home',
@@ -6,6 +8,8 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./home.component.css']
 })
 export class HomeComponent implements OnInit {
+
+  opened = true;
 
   constructor() { }
 
