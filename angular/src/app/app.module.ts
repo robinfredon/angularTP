@@ -10,19 +10,23 @@ import { RouterModule } from '@angular/router';
 import {MatToolbarModule} from '@angular/material/toolbar';
 import {MatButtonModule} from '@angular/material/button';
 import{FormsModule} from '@angular/forms';
+import { GridComponent } from './home/grid/grid.component';
+import {MatGridListModule} from '@angular/material/grid-list';
 
 @NgModule({
   declarations: [
     AppComponent,
     MovieListComponent,
     MovieDetailComponent,
-    HomeComponent
+    HomeComponent,
+    GridComponent
   ],
   imports: [
     BrowserModule,
     BrowserAnimationsModule,
     MatToolbarModule,
     MatButtonModule,
+    MatGridListModule,
     FormsModule,
     RouterModule
   ],
