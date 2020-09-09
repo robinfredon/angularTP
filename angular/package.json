@@ -21,6 +21,7 @@
     "@angular/platform-browser": "~10.1.0",
     "@angular/platform-browser-dynamic": "~10.1.0",
     "@angular/router": "~10.1.0",
+    "admin-lte": "^3.0.5",
     "bootstrap": "^3.3.7",
     "rxjs": "~6.6.0",
     "tslib": "^2.0.0",
