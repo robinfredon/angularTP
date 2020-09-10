@@ -1,9 +1,11 @@
 mat-grid-tile{
-    background-color: #BDD0E0;
-    width: 15px;
+   /*background-color: #BDD0E0;*/
 }
 .example-card {
-    width: 300px;
-    
+    width: 50%;
+  }
+mat-grid-list{
+    margin-top: 10px;
 }
 
+ 
