@@ -1,7 +1,7 @@
-import { Movie } from './movie.model';
+import { MovieOmdb } from './movie-omdb.model';
 
 export class MovieSearch {
     Response: boolean;
-    Search: Movie[];
+    Search: MovieOmdb[];
     totalResult: number;
 }
