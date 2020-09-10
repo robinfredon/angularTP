@@ -1,5 +1,5 @@
 import { Injectable } from '@angular/core';
-import {Movie} from './movie.model';
+import {Movie} from '../Movie/movie.model';
 import {HttpClient} from '@angular/common/http';
 import {Observable} from 'rxjs';
 import {environment} from '../../environments/environment';
@@ -10,7 +10,6 @@ import {environment} from '../../environments/environment';
 export class MoviesBddService {
 
   apiUrl = `${environment.apiUrl}/movies`;
-  apiKey = 'ae152c2c';
 
   constructor(private httpClient: HttpClient) { }
 
