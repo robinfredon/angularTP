@@ -3,11 +3,14 @@ import {Movie} from '../Model/movie.model';
 import {HttpClient} from '@angular/common/http';
 import {Observable} from 'rxjs';
 import {environment} from '../../environments/environment';
+import { MovieSearch } from '../Model/movie-search.model';
 
 @Injectable({
   providedIn: 'root'
 })
 export class MoviesBddService {
+
+  lastSearch : MovieSearch;
 
   apiUrl = `${environment.apiUrl}/movies`;
 
@@ -15,6 +18,10 @@ export class MoviesBddService {
 
   get(): Observable<Array<Movie>>{
     return this.httpClient.get<Array<Movie>>(this.apiUrl);
+  }
+
+  getLastSearch(): MovieSearch{
+    return this.lastSearch;
   }
 
   filter(search: string): Observable<Array<Movie>> {

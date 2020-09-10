@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { MovieSearch } from 'src/app/Model/movie-search.model';
+import { MoviesBddService } from 'src/app/Services/movies-bdd.service';
 
 @Component({
   selector: 'app-movie-list',
@@ -10,9 +11,10 @@ export class MovieListComponent implements OnInit {
 
   movies : MovieSearch;
   
-  constructor() { }
+  constructor(private service: MoviesBddService) { }
 
   ngOnInit(): void {
+    this.movies = this.service.lastSearch;
   }
 
 }

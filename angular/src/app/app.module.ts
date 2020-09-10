@@ -6,12 +6,13 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { RouterModule } from '@angular/router';
 import { MatToolbarModule } from '@angular/material/toolbar';
 import { MatButtonModule } from '@angular/material/button';
-import { FormsModule } from '@angular/forms';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { MatGridListModule } from '@angular/material/grid-list';
 import { MatCardModule } from '@angular/material/card';
 import { MatChipsModule } from '@angular/material/chips';
 import { MatIconModule } from '@angular/material/icon';
 import { MatInputModule } from '@angular/material/input';
+import { MatProgressSpinnerModule } from '@angular/material/progress-spinner';
 
 import { HomeComponent } from './home/home.component';
 import { GridComponent } from './home/grid/grid.component';
@@ -45,8 +46,10 @@ import { AppRoutingModule } from './app-routing.module';
     MatChipsModule,
     MatIconModule,
     FormsModule,
+    ReactiveFormsModule,
     MatCardModule,
     MatInputModule,
+    MatProgressSpinnerModule,
     RouterModule
   ],
   providers: [

@@ -9,7 +9,6 @@ import { MovieSearch } from '../Model/movie-search.model';
   providedIn: 'root'
 })
 export class OmdbApiService {
-  
 
   apiUrl = `${environment.apiOmdbUrl}${environment.apiKey}`;
 
