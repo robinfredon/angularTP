@@ -11,6 +11,7 @@ import { MatGridListModule } from '@angular/material/grid-list';
 import { MatCardModule } from '@angular/material/card';
 import { MatChipsModule } from '@angular/material/chips';
 import { MatIconModule } from '@angular/material/icon';
+import { MatInputModule } from '@angular/material/input';
 
 import { HomeComponent } from './home/home.component';
 import { GridComponent } from './home/grid/grid.component';
@@ -45,6 +46,7 @@ import { AppRoutingModule } from './app-routing.module';
     MatIconModule,
     FormsModule,
     MatCardModule,
+    MatInputModule,
     RouterModule
   ],
   providers: [

@@ -1,8 +1,12 @@
 .navbar{
   justify-content: space-between;
-  background-color: #ffffff;
+  background-color: #7F0202;
 }
 
 span{
   padding-right: 1rem;
+}
+
+.example-full-width {
+  width: 100%;
 }
