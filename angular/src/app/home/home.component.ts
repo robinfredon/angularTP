@@ -9,6 +9,7 @@ import {MatSidenavModule} from '@angular/material/sidenav';
 })
 export class HomeComponent implements OnInit {
 
+  id : string = "tt4244162";
   constructor() { }
 
   ngOnInit(): void {

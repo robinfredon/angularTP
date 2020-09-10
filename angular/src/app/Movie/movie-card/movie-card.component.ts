@@ -1,4 +1,7 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Input } from '@angular/core';
+import { MovieFull } from '../../Model/movie-full.model';
+import { ActivatedRoute } from '@angular/router';
+import { OmdbApiService } from 'src/app/Services/omdb-api.service';
 
 @Component({
   selector: 'app-movie-card',
@@ -7,9 +10,16 @@ import { Component, OnInit } from '@angular/core';
 })
 export class MovieCardComponent implements OnInit {
 
-  constructor() { }
+  @Input() id: string;
+  movie : MovieFull;
+  test_id : string = "tt4244162";
+
+  constructor(private service: OmdbApiService, private route: ActivatedRoute) { }
 
   ngOnInit(): void {
+    this.route.params.subscribe(params => {
+         this.service.getById(this.id).subscribe((movie) => this.movie = movie);
+       });
   }
 
 }

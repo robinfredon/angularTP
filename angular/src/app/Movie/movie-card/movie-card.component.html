@@ -1,1 +1,11 @@
 <p>COUCOU! (from movie-card component!)</p>
+<div>TEST</div>
+
+<ng-container *ngIf="movie">
+    <h2>{{movie.imdbID}}</h2>
+    <p>{{movie.Plot}}</p>
+</ng-container>
+
+<ng-container *ngIf="!movie">
+    <p>Movie Not Defined</p>
+</ng-container>
