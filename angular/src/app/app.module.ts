@@ -13,6 +13,8 @@ import{FormsModule} from '@angular/forms';
 import { GridComponent } from './home/grid/grid.component';
 import {MatGridListModule} from '@angular/material/grid-list';
 import {MatCardModule} from '@angular/material/card';
+import { MovieCardComponent } from './Movie/movie-card/movie-card.component';
+import { SearchBarComponent } from './home/search-bar/search-bar.component';
 
 @NgModule({
   declarations: [
@@ -20,7 +22,9 @@ import {MatCardModule} from '@angular/material/card';
     MovieListComponent,
     MovieDetailComponent,
     HomeComponent,
-    GridComponent
+    GridComponent,
+    MovieCardComponent,
+    SearchBarComponent
   ],
   imports: [
     BrowserModule,
