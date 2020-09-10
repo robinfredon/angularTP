@@ -12,6 +12,7 @@ import {MatButtonModule} from '@angular/material/button';
 import{FormsModule} from '@angular/forms';
 import { GridComponent } from './home/grid/grid.component';
 import {MatGridListModule} from '@angular/material/grid-list';
+import {MatCardModule} from '@angular/material/card';
 
 @NgModule({
   declarations: [
@@ -28,6 +29,7 @@ import {MatGridListModule} from '@angular/material/grid-list';
     MatButtonModule,
     MatGridListModule,
     FormsModule,
+    MatCardModule,
     RouterModule
   ],
   providers: [],
