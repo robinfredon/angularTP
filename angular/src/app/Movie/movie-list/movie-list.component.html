@@ -1,1 +1,9 @@
-
+<div class="movie-list">
+    <ng-container *ngIf="movies.Response">
+        <mat-grid-list cols="6" rowHeight="450px">
+            <ng-container *ngFor="let movie of movies.Search">
+                <app-movie-card [movie]="movie"></app-movie-card>
+            </ng-container>
+        </mat-grid-list>
+    </ng-container>
+</div>

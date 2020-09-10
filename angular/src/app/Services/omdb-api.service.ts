@@ -3,11 +3,13 @@ import {HttpClient} from '@angular/common/http';
 import {Observable} from 'rxjs';
 import {environment} from '../../environments/environment';
 import {MovieFull} from '../Model/movie-full.model';
+import { MovieSearch } from '../Model/movie-search.model';
 
 @Injectable({
   providedIn: 'root'
 })
 export class OmdbApiService {
+  
 
   apiUrl = `${environment.apiOmdbUrl}${environment.apiKey}`;
 
@@ -22,5 +24,10 @@ export class OmdbApiService {
   getById(id : string): Observable<MovieFull>{
     const requestUrl = this.apiUrl + '&i=' + id;
     return this.httpClient.get<MovieFull>(requestUrl);
+  }
+
+  getSearch(search: String): Observable<MovieSearch> {
+    const requestUrl = this.apiUrl + '&s=' + search;
+    return this.httpClient.get<MovieSearch>(requestUrl);
   }
 }

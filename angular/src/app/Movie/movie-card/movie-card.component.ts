@@ -1,7 +1,5 @@
 import { Component, OnInit, Input } from '@angular/core';
-import { MovieFull } from '../../Model/movie-full.model';
-import { ActivatedRoute } from '@angular/router';
-import { OmdbApiService } from 'src/app/Services/omdb-api.service';
+import { MovieOmdb } from 'src/app/Model/movie-omdb.model';
 
 @Component({
   selector: 'app-movie-card',
@@ -10,16 +8,10 @@ import { OmdbApiService } from 'src/app/Services/omdb-api.service';
 })
 export class MovieCardComponent implements OnInit {
 
-  @Input() id: string;
-  movie : MovieFull;
-  test_id : string = "tt4244162";
+  @Input() movie : MovieOmdb;
 
-  constructor(private service: OmdbApiService, private route: ActivatedRoute) { }
+  constructor() { }
 
-  ngOnInit(): void {
-    this.route.params.subscribe(params => {
-         this.service.getById(this.id).subscribe((movie) => this.movie = movie);
-       });
-  }
+  ngOnInit(): void { }
 
 }

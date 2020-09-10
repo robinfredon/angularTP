@@ -1,11 +1,13 @@
-<p>COUCOU! (from movie-card component!)</p>
-<div>TEST</div>
-
-<ng-container *ngIf="movie">
-    <h2>{{movie.imdbID}}</h2>
-    <p>{{movie.Plot}}</p>
-</ng-container>
-
-<ng-container *ngIf="!movie">
-    <p>Movie Not Defined</p>
-</ng-container>
+<mat-grid-tile>
+    <mat-card class="example-card">
+        <mat-card-header>
+          <mat-card-title>Avatar</mat-card-title>
+          <mat-card-subtitle>Fantastique</mat-card-subtitle>
+        </mat-card-header>
+        <img mat-card-image src="https://fr.web.img6.acsta.net/medias/nmedia/18/78/95/70/19485155.jpg">
+        <mat-card-actions>
+          <button mat-button>Favoris</button>
+          <button mat-button>Details</button>
+        </mat-card-actions>
+    </mat-card>
+</mat-grid-tile>
