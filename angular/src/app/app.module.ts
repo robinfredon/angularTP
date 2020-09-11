@@ -24,6 +24,7 @@ import { HttpClient, HttpClientModule } from '@angular/common/http';
 import { OmdbApiService } from './Services/omdb-api.service';
 import { MoviesBddService } from './Services/movies-bdd.service';
 import { AppRoutingModule } from './app-routing.module';
+import { FavoriteComponent } from './favorite/favorite.component';
 
 @NgModule({
   declarations: [
@@ -33,7 +34,8 @@ import { AppRoutingModule } from './app-routing.module';
     HomeComponent,
     GridComponent,
     MovieCardComponent,
-    SearchBarComponent
+    SearchBarComponent,
+    FavoriteComponent
   ],
   imports: [
     AppRoutingModule,
