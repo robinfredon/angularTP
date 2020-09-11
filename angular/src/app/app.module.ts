@@ -15,16 +15,17 @@ import { MatInputModule } from '@angular/material/input';
 import { MatProgressSpinnerModule } from '@angular/material/progress-spinner';
 
 import { HomeComponent } from './home/home.component';
-import { GridComponent } from './home/grid/grid.component';
 import { SearchBarComponent } from './home/search-bar/search-bar.component';
-import { MovieCardComponent } from './Movie/movie-card/movie-card.component';
-import { MovieDetailComponent } from './Movie/movie-detail/movie-detail.component';
+import { MovieDetailComponent } from './movie-detail/movie-detail.component';
 import { MovieListComponent } from './Movie/movie-list/movie-list.component';
 import { HttpClient, HttpClientModule } from '@angular/common/http';
 import { OmdbApiService } from './Services/omdb-api.service';
 import { MoviesBddService } from './Services/movies-bdd.service';
 import { AppRoutingModule } from './app-routing.module';
 import { FavoriteComponent } from './favorite/favorite.component';
+import { MovieCardComponent } from './Movie/movie-card/movie-card.component';
+
+
 
 @NgModule({
   declarations: [
@@ -32,7 +33,6 @@ import { FavoriteComponent } from './favorite/favorite.component';
     MovieListComponent,
     MovieDetailComponent,
     HomeComponent,
-    GridComponent,
     MovieCardComponent,
     SearchBarComponent,
     FavoriteComponent
