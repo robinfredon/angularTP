@@ -1,12 +1,23 @@
-<mat-toolbar class="navbar">
-    <div>CineShow</div>
-    <div>
-      <button mat-button>Home</button>
-      <mat-form-field>
-        <input matInput>
-      </mat-form-field>
-      <button mat-button>Recherche</button>
-      <button mat-button>Favoris</button>
-    </div>
-  </mat-toolbar> 
+<mat-toolbar class="navbar mat-toolbar-single-row">
+  <div>CineShow</div>
+  
+  <ng-container *ngIf="searchStr">
+    <ng-container *ngIf="searchStr.length >= 3">
+      <ng-container *ngIf="movies">
+        <div>{{movies.Response}}</div>
+      </ng-container>
+    </ng-container>
+    <div>{{searchStr}}</div>
+  </ng-container>
 
+  <div>
+    <form [formGroup]="searchForm">
+      <mat-form-field>
+        <input matInput formControlName="search" placeholder="Recherche">
+      </mat-form-field>
+    </form>
+  </div>
+  <div>
+    <button mat-button>Favoris</button>
+  </div>
+</mat-toolbar>

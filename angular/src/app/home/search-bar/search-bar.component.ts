@@ -13,7 +13,7 @@ import { MoviesBddService } from 'src/app/Services/movies-bdd.service';
 export class SearchBarComponent implements OnInit {
 
   movies : MovieSearch;
-  searchStr : String = "test";
+  searchStr : String;
 
   searchForm: FormGroup;
   searchCtrl: FormControl;
@@ -26,17 +26,20 @@ export class SearchBarComponent implements OnInit {
   }
 
   ngOnInit(): void {
-    this.service.getSearch(this.searchStr).subscribe((result) => {
+    //this.serviceMovie.initLastSearch();
+    //this.serviceMovie.lastSearch = this.service.getSearch(this.searchStr);
+    /*this.service.getSearch(this.searchStr).subscribe((result) => {
       this.movies = result;
-      this.serviceMovie.lastSearch = result;
-    });
+    });*/
 
-    /*this.searchCtrl.valueChanges
+    this.searchCtrl.valueChanges
       .pipe(
-        debounceTime(500),
-        switchMap(value => this.service.filter(value))
+        debounceTime(500)
       )
-      .subscribe(result => this.movies = result);*/
+      .subscribe(result => {
+        this.searchStr = result;
+        this.service.getSearch(result).subscribe((resultBis) => this.serviceMovie.lastSearch.next(resultBis));
+      });
   }
 
 }

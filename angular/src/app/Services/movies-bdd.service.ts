@@ -1,26 +1,32 @@
 import { Injectable } from '@angular/core';
 import {Movie} from '../Model/movie.model';
 import {HttpClient} from '@angular/common/http';
-import {Observable} from 'rxjs';
+import {BehaviorSubject, Observable} from 'rxjs';
 import {environment} from '../../environments/environment';
 import { MovieSearch } from '../Model/movie-search.model';
+import { OmdbApiService } from './omdb-api.service';
 
 @Injectable({
   providedIn: 'root'
 })
 export class MoviesBddService {
 
-  lastSearch : MovieSearch;
+  lastSearch: BehaviorSubject<MovieSearch> = new BehaviorSubject(null);
+  initString: String = "aaaa";
 
   apiUrl = `${environment.apiUrl}/movies`;
 
-  constructor(private httpClient: HttpClient) { }
+  constructor(private httpClient: HttpClient, private OmdbService: OmdbApiService) { }
+
+  initLastSearch(){
+    this.OmdbService.getSearch(this.initString).subscribe((result) => this.lastSearch.next(result)); 
+  }
 
   get(): Observable<Array<Movie>>{
     return this.httpClient.get<Array<Movie>>(this.apiUrl);
   }
 
-  getLastSearch(): MovieSearch{
+  getLastSearch(): Observable<MovieSearch>{
     return this.lastSearch;
   }
 

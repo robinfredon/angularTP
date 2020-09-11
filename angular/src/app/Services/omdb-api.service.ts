@@ -25,8 +25,12 @@ export class OmdbApiService {
     return this.httpClient.get<MovieFull>(requestUrl);
   }
 
-  getSearch(search: String): Observable<MovieSearch> {
-    const requestUrl = this.apiUrl + '&s=' + search;
-    return this.httpClient.get<MovieSearch>(requestUrl);
+  getSearch(search: String = null): Observable<MovieSearch> {
+    if(search !== null){
+      if(search.length >= 3){
+        const requestUrl = this.apiUrl + '&s=' + search;
+        return this.httpClient.get<MovieSearch>(requestUrl);
+      }
+    }
   }
 }

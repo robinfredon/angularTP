@@ -16,7 +16,7 @@ import { MatProgressSpinnerModule } from '@angular/material/progress-spinner';
 
 import { HomeComponent } from './home/home.component';
 import { SearchBarComponent } from './home/search-bar/search-bar.component';
-import { MovieDetailComponent } from './movie-detail/movie-detail.component';
+import { MovieDetailComponent } from './movie/movie-detail/movie-detail.component';
 import { MovieListComponent } from './Movie/movie-list/movie-list.component';
 import { HttpClient, HttpClientModule } from '@angular/common/http';
 import { OmdbApiService } from './Services/omdb-api.service';

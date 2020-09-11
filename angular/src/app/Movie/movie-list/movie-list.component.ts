@@ -9,12 +9,15 @@ import { MoviesBddService } from 'src/app/Services/movies-bdd.service';
 })
 export class MovieListComponent implements OnInit {
 
-  movies : MovieSearch;
+  movies: MovieSearch;
   
   constructor(private service: MoviesBddService) { }
 
   ngOnInit(): void {
-    this.movies = this.service.lastSearch;
+    this.service.initLastSearch();
+    this.service.lastSearch.subscribe((movies) => {
+      this.movies = movies;
+    });
   }
 
 }
