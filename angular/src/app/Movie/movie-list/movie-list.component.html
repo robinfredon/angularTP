@@ -1,0 +1,12 @@
+<div class="movie-list">
+    <ng-container *ngIf="movies">
+        <mat-grid-list cols="4" rowHeight="450px">
+            <p>{{movies.totalResults}}</p>
+            <ng-container *ngFor="let movie of movies.Search">
+                <mat-grid-tile>
+                    <app-movie-card [movie]="movie"></app-movie-card>
+                </mat-grid-tile>
+            </ng-container>
+        </mat-grid-list>
+    </ng-container>
+</div>

@@ -1,0 +1,20 @@
+<mat-toolbar class="navbar">
+  <div><button mat-button [routerLink]="['/home']">CineShow</button></div>
+
+  <ng-container *ngIf="movies">
+    <ng-container *ngIf="movies.totalResult > 0">
+      <div>{{movies.totalResults}} réponses</div>
+    </ng-container>
+  </ng-container>
+
+  <div>
+    <form [formGroup]="searchForm">
+      <mat-form-field>
+        <input matInput formControlName="search" placeholder="Recherche">
+      </mat-form-field>
+    </form>
+  </div>
+  <div>
+    <button mat-button>Favoris</button>
+  </div>
+</mat-toolbar>
