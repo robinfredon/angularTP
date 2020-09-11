@@ -1,13 +1,10 @@
-<mat-toolbar class="navbar mat-toolbar-single-row">
-  <div>CineShow</div>
-  
-  <ng-container *ngIf="searchStr">
-    <ng-container *ngIf="searchStr.length >= 3">
-      <ng-container *ngIf="movies">
-        <div>{{movies.Response}}</div>
-      </ng-container>
+<mat-toolbar class="navbar">
+  <div><button mat-button [routerLink]="['/home']">CineShow</button></div>
+
+  <ng-container *ngIf="movies">
+    <ng-container *ngIf="movies.totalResult > 0">
+      <div>{{movies.totalResults}} réponses</div>
     </ng-container>
-    <div>{{searchStr}}</div>
   </ng-container>
 
   <div>

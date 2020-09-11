@@ -40,6 +40,10 @@ export class SearchBarComponent implements OnInit {
         this.searchStr = result;
         this.service.getSearch(result).subscribe((resultBis) => this.serviceMovie.lastSearch.next(resultBis));
       });
+
+      this.serviceMovie.lastSearch.subscribe((movies) => {
+        this.movies = movies;
+      });
   }
 
 }
